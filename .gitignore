@@ -1,0 +1,40 @@
+# Node modules
+*node_modules/
+
+# Build output
+.next/
+out/
+
+# Dependency directories
+/.pnp/
+/.pnp.js
+
+# Local environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/Editor specific
+.vscode/
+.idea/
+
+# macOS specific
+.DS_Store
+
+# Next.js TypeScript build output
+*.tsbuildinfo
+
+# Next.js static build output (for export)
+*.next/
+
+# Serverless build output
+.serverless/
+
+# Next.js related files (if any)
+coverage/
