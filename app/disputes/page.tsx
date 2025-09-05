@@ -166,8 +166,8 @@ export default function DisputesPage() {
       userId: user?.id || 'current-user',
       submittedAt: new Date(),
       status: 'pending',
-      staffName: dispute.staffName || user?.name || 'Current User',
-      staffId: dispute.staffId || user?.id || 'current-user',
+      staffName: user?.name || 'Current User',
+      staffId: user?.id || 'current-user',
       submittedBy: user?.id || 'current-user'
     }
     setDisputes(prev => [newDispute, ...prev])
