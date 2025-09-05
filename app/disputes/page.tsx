@@ -152,10 +152,18 @@ export default function DisputesPage() {
     }
   }
 
-  const handleCreateDispute = (dispute: Omit<Dispute, 'id' | 'submittedAt' | 'status'>) => {
+  const handleCreateDispute = (dispute: {
+    type: 'time_clock' | 'attendance' | 'grove_score' | 'bonus' | 'task' | 'other';
+    title: string;
+    description: string;
+    priority: 'low' | 'medium' | 'high' | 'urgent';
+    relatedRecordId?: string;
+    relatedRecordType?: string;
+  }) => {
     const newDispute: Dispute = {
       ...dispute,
       id: Date.now().toString(),
+      userId: user?.id || 'current-user',
       submittedAt: new Date(),
       status: 'pending',
       staffName: dispute.staffName || user?.name || 'Current User',
